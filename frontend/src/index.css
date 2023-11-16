@@ -29,4 +29,14 @@ code {
   border-left: 1px solid rgba(0,0,0,0.25);
 }
 
+#changeModeText{
+  cursor: pointer;
+  transition: 0.1s hover;
+}
+
+#changeModeText:hover{
+  color: teal;
+  opacity: 0.8;
+}
+
 

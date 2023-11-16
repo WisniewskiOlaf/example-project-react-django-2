@@ -45,11 +45,16 @@ class HandleUserConnction(APIView):
 
 
     
-    def get(self, request):
+    def post(self, request):
         
-        login = request.data.get('login')
-        password = request.data.get('password')  # Assuming owner is an ID
+        print("request",request)
+
+        login = str(request.data.get('login'))
+        password = str(request.data.get('password'))  # Assuming owner is an ID
         
+        print(login)
+        print(password)
+
         try:
             
             if (User.objects.raw('SELECT count(*) FROM notes_user WHERE username LIKE "'+login+'" AND password LIKE "'+password+'"') == 1):
