@@ -5,13 +5,13 @@
 /.pnp
 .pnp.js
 /backend/backend/__pycache__
-/backend/notes/__pycache__/
 # testing
 /coverage
 
 # production
 /build
-
+/frontend/src/constants/index.js
+/backend/notes/__pycache__
 # misc
 .DS_Store
 .env.local

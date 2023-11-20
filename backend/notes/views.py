@@ -46,7 +46,6 @@ class HandleUserConnction(APIView):
 
     
     def post(self, request):
-<<<<<<< HEAD
         
         login = str(request.data.get('login'))
         password = str(request.data.get('password'))  # Assuming owner is an ID
@@ -57,17 +56,6 @@ class HandleUserConnction(APIView):
         cursor.execute('SELECT count(*) FROM notes_user WHERE username LIKE "'+login+'" AND password LIKE "'+password+'"')
         row = str(cursor.fetchone()[0])
         print (row)
-=======
-        
-        print("request",request)
-
-        login = str(request.data.get('login'))
-        password = str(request.data.get('password'))  # Assuming owner is an ID
-        
-        print(login)
-        print(password)
-
->>>>>>> 7f7aeca6d7b1cb3c3b1330460924464144fcd55c
         try:
             if (row == "1"):
                 return Response({'message': 'User found'}, status=status.HTTP_200_OK)
