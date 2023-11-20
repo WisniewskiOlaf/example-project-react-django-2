@@ -32,7 +32,7 @@ class CreateNoteView(APIView):
             return Response({'message': 'Note created successfully'}, status=status.HTTP_201_CREATED)
         except User.DoesNotExist:
             return Response({'error': 'User not found'})
-
+    
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
